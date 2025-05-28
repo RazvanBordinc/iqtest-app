@@ -12,7 +12,6 @@
     <strong>A comprehensive cognitive assessment platform featuring advanced IQ testing capabilities, real-time scoring, global leaderboards, and stunning animations</strong>
   </p>
 
-
   <p>
     <a href="#-project-overview">Overview</a> •
     <a href="#-live-deployment">Live Demo</a> •
@@ -43,8 +42,8 @@ To democratize cognitive assessment by providing accessible, scientifically-desi
 ### 🌐 Production URLs
 
 - **Frontend Application**: [https://iqtest-app.vercel.app](https://iqtest-app.vercel.app)
-- **Backend API**: [https://iqtest-server-tkhl.onrender.com](https://iqtest-server-tkhl.onrender.com)
-- **API Documentation**: [https://iqtest-server-tkhl.onrender.com/swagger](https://iqtest-server-tkhl.onrender.com/swagger)
+- **Backend API**: [https://iqtest-server-project.onrender.com](https://iqtest-server-project.onrender.com)
+- **API Documentation**: [https://iqtest-server-project.onrender.com/swagger](https://iqtest-server-project.onrender.com/swagger)
 
 ### 📊 Live Statistics
 
@@ -107,10 +106,10 @@ To democratize cognitive assessment by providing accessible, scientifically-desi
 
 | Type                    | Focus Area                              | Questions | Duration | Complexity |
 | ----------------------- | --------------------------------------- | --------- | -------- | ---------- |
-| **Numerical Reasoning** | Mathematical logic, pattern recognition | 20        | 25 min   | ⭐⭐⭐     |
-| **Verbal Intelligence** | Language comprehension, analogies       | 20        | 30 min   | ⭐⭐⭐     |
-| **Memory & Recall**     | Short-term memory, spatial recognition  | 15        | 22 min   | ⭐⭐⭐     |
-| **Comprehensive IQ**    | Mixed cognitive abilities               | 16        | 45 min   | ⭐⭐⭐⭐⭐ |
+| **Numerical Reasoning** | Mathematical logic, pattern recognition | 24        | 18 min   | ⭐⭐⭐     |
+| **Verbal Intelligence** | Language comprehension, analogies       | 28        | 20 min   | ⭐⭐⭐     |
+| **Memory & Recall**     | Short-term memory, spatial recognition  | 20        | 15 min   | ⭐⭐⭐     |
+| **Comprehensive IQ**    | Mixed cognitive abilities               | 40        | 35 min   | ⭐⭐⭐⭐⭐ |
 
 #### Question Types
 
@@ -263,7 +262,7 @@ To democratize cognitive assessment by providing accessible, scientifically-desi
 -- Core Tables
 Users              -- User accounts and authentication
 TestTypes          -- Test category definitions
-Questions          -- Question pool with metadata
+Questions          -- Question pool (fetched from GitHub)
 Answers            -- User responses and scoring
 TestResults        -- Completed test records
 LeaderboardEntries -- Performance rankings
@@ -272,9 +271,10 @@ LeaderboardEntries -- Performance rankings
 #### Caching Strategy
 
 - **User Sessions**: Redis-based session storage
-- **Question Pools**: Cached question sets for performance
+- **Question Pools**: Cached question sets from GitHub (24-hour TTL)
 - **Leaderboards**: Cached rankings with TTL
 - **Authentication**: Token validation caching
+- **Test Availability**: In-memory caching for performance
 
 ### 🚀 Deployment Infrastructure
 
@@ -493,6 +493,8 @@ dotnet test --filter Category=Integration
 - ✅ GDPR compliance features
 - ✅ Performance optimizations
 - ✅ Production deployment
+- ✅ GitHub-based question management
+- ✅ Advanced caching strategies
 
 ### 🚧 Future Enhancements
 
@@ -581,7 +583,7 @@ Special thanks to:
     <a href="https://iqtest-app.vercel.app">🌐 Live Application</a> •
     <a href="../iqtest/README.md">📱 Frontend Docs</a> •
     <a href="../IqTest-server/README.md">⚙️ Backend Docs</a> •
-    <a href="https://iqtest-server-tkhl.onrender.com/swagger">📚 API Docs</a>
+    <a href="https://iqtest-server-project.onrender.com/swagger">📚 API Docs</a>
   </p>
   
   <p>
