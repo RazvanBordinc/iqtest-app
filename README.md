@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/.NET-9.0-512BD4?style=for-the-badge&logo=dotnet" alt=".NET"/>
   <img src="https://img.shields.io/badge/Status-Production-brightgreen?style=for-the-badge" alt="Production"/>
 
-![IqTest Banner](./assets/iqtest.png)
+![IqTest Banner](./iqtest.png)
 
   <p>
     <strong>A comprehensive cognitive assessment platform featuring advanced IQ testing capabilities, real-time scoring, global leaderboards, and stunning animations</strong>
